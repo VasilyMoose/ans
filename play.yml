@@ -1,0 +1,12 @@
+---
+- hosts: redhat-servers
+  vars:
+    nginx_listen_port: 8080
+  become: true
+  become_method: su
+  become_user: root
+  #remote_user: ansible
+  roles:
+   - epel
+   - nginx
+
